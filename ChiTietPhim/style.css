@@ -585,6 +585,7 @@
 #total-price-text {
   color: #e50914;
 }
+
 .movie-rating {
   display: flex;
   align-items: center;
@@ -606,4 +607,28 @@
 .review-count {
   color: #aaaaaa;
   font-size: 0.9rem;
+}
+
+.schedule-section {
+  margin-top: 40px;
+  color: #fff;
+}
+
+.time-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.time-view {
+  background: #222;
+  color: #aaa;
+  border: 1px solid #333;
+  padding: 12px 0;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: 500;
+  cursor: default;
+  transition: none;
 }
