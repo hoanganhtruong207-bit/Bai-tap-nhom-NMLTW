@@ -1,0 +1,337 @@
+/*
+   1. RESET & GIAO DIỆN TỐI CHỦ ĐẠO (DARK MODE)
+*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 95%;
+    margin: 0px auto;
+    background-color: #111111;
+    color: #e5e5e5;
+    /* Chữ trắng xám dịu mắt */
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    min-width: 1024px;
+}
+
+/* 
+   THANH ĐẦU TRANG SỬA TRÊN CODE GỐC (HÀM CƠ BẢN PHẲNG HÀNG)
+ */
+.header {
+    width: 100%;
+    background-color: #111111;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    /* Định khoảng cách lề trái phải cho thông thoáng */
+}
+
+/* KHỐI NAV MENU VÀ SEARCH: Ép chúng đứng chung hàng ngang bên phải */
+.header-nav-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    /* Tự động co giãn phần không gian còn lại */
+    margin-left: 50px;
+    /* Tạo khoảng cách an toàn với logo */
+    flex-wrap: wrap;
+}
+
+/* KHỐI LOGO QUAY VỀ TRANG CHỦ */
+.header__logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    /* Xóa gạch chân của thẻ link bọc ngoài logo */
+    flex-shrink: 0;
+}
+
+.header__img {
+    width: 70%;
+    height: 70px;
+}
+
+/* THANH MENU ĐIỀU HƯỚNG CÁC CHỮ */
+.horizontal-nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    /* Khoảng cách cơ bản giữa các nút chữ */
+    flex-wrap: wrap;
+}
+
+.horizontal-nav__link {
+    color: #b3b3b3;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    /* Giữ chữ luôn trên 1 dòng, không tự rớt xuống */
+    flex-wrap: wrap;
+}
+
+.horizontal-nav__link:hover {
+    color: #ffffff;
+}
+
+
+/* KHỐI TÌM KIẾM VIÊN THUỐC HIỆN ĐẠI */
+.form-search {
+    width: 250px;
+    /* Giới hạn độ rộng cố định để không đẩy các khối khác */
+    height: 38px;
+    background-color: #1a1a1a;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 0 5px 0 15px;
+    border: 1px solid #333;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.form-search_input {
+    width: 100%;
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-size: 0.85rem;
+}
+
+.form-search_input::placeholder {
+    color: #666;
+}
+
+.form-search_button {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #b3b3b3;
+    font-size: 0.9rem;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.login {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: bold;
+    padding: 8px 18px;
+    border-radius: 20px;
+    white-space: nowrap;
+    /* Bo tròn đồng bộ với ô tìm kiếm */
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+    flex-shrink: 0;
+}
+
+.login {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+
+
+/* 
+   3. BANNER KHÔNG VIỀN (HERO BANNER)
+ */
+.banner-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+    /* Bật flexbox để xếp hàng ngang */
+    justify-content: space-between;
+    /* Các banner nằm ngang song song */
+    gap: 20px;
+    /* Giãn cách đều 4 banner sang 2 bên */
+    /* Khoảng cách giữa các banner */
+}
+
+/* Định dạng kích thước chuẩn cho từng khối banner dọc */
+.swap-banner {
+    width: 23%;
+    /* Khoảng 23% để 4 cái cộng lại vừa khít hàng ngang */
+    position: relative;
+    height: 380px;
+    /* Chiều cao banner dọc */
+    aspect-ratio: ;
+    overflow: hidden;
+    border-radius: 8px;
+    /* Bo góc cho đẹp giống Netflix */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hiệu ứng nổi lên khi di chuột vào từng banner */
+
+
+/* 2. SỬA DẤU PHẨY Ở ĐÂY ĐỂ ĐỊNH DẠNG CHO CẢ 2 ẢNH */
+.swap-banner__img,
+.swap-banner__photo1,
+.swap-banner__photo2,
+.swap-banner__photo3,
+.swap-banner__photo4 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Giúp ảnh dọc không bị méo, tự co giãn vừa khung */
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+/* KHI ĐƯA CHUỘT VÀO BANNER (HOVER) */
+.swap-banner:hover {
+    transform: translateY(-8px) scale(1.02);
+    /* Đẩy banner nhích lên trên 8px và phóng to nhẹ 2% */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    /* Tạo bóng đổ đậm và rộng hơn để có cảm giác "nổi lên" */
+}
+
+/* 
+   4. KHU VỰC BỐ CỤC 2 CỘT NỀN TỐI (MAIN CONTENT)
+ */
+.main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    /* Ép buộc chạy hàng ngang bằng mọi giá */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    /* Tuyệt đối không cho các banner tự động nhảy xuống dòng */
+    justify-content: center;
+    /* Căn giữa cụm banner */
+    gap: 20px;
+    /* Khoảng cách giữa các banner */
+}
+
+
+/* CỘT TRÁI - DANH SÁCH PHIM */
+.main_article {
+    flex: 2;
+}
+
+.movie-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.featured-block {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+    background: #181818;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.main__photo {
+    width: 40%;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.featured-text {
+    flex: 1;
+    line-height: 1.6;
+    color: #cccccc;
+}
+
+.highlight-text {
+    color: #e50914;
+    font-weight: 600;
+}
+
+/* DANH SÁCH SIÊU PHẨM */
+.list {
+    list-style: none;
+    counter-reset: movie-counter;
+    background: #181818;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+.list__item {
+    position: relative;
+    padding-left: 45px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.list__item::before {
+    counter-increment: movie-counter;
+    content: counter(movie-counter);
+    position: absolute;
+    left: 0;
+    top: -2px;
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #e50914;
+    /* Số thứ tự màu đỏ to rõ */
+}
+
+.list__item:last-child {
+    margin-bottom: 0;
+}
+
+.movie-name {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.movie-meta {
+    color: #aaaaaa;
+}
+
+.section-footer-text {
+    line-height: 1.6;
+    color: #808080;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+
+/* ==========================================================================
+   6. CHÂN TRANG (FOOTER)
+   ========================================================================== */
+.page-footer {
+    background-color: #141414;
+    padding: 30px;
+    text-align: center;
+    color: #666;
+    font-size: 0.85rem;
+    border-top: 1px solid #252525;
+    margin-top: 60px;
+}
