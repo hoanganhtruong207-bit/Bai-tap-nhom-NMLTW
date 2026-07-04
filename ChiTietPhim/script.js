@@ -1,5 +1,3 @@
-// --- script.js ---
-
 document.addEventListener("DOMContentLoaded", () => {
   // 1. Xử lý xem Trailer (Động)
   const btnWatchMovie = document.getElementById("btn-open-player");
