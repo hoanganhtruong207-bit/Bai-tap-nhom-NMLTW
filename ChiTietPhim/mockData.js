@@ -27,14 +27,15 @@ const allMovies = [
   },
   {
     id: "nha-ba-nu",
-    title: "Nhà Bà Nữ",
+    title: "NHÀ BÀ NỮ",
     image: "nhabanu.webp",
     year: 2023,
     ageRestriction: "T18",
     duration: "102 phút",
     quality: "HD",
     rating: "9.1/10",
-    description: "Câu chuyện về gia đình bà Nữ...",
+    description:
+      "Những mâu thuẫn thế hệ, những tổn thương chồng chất và tình thân đầy rạn nứt trong tiệm bánh canh cua của gia đình bà Nữ. Liệu sau những tranh cãi nảy lửa, họ có thể tìm lại được tiếng nói chung?",
     trailerUrl: "https://www.youtube.com/embed/IkaP0KJWTsQ",
     schedule: [
       "09:00",
@@ -51,7 +52,7 @@ const allMovies = [
   },
   {
     id: "thua-me-con-di",
-    title: "Thưa Mẹ Con Đi",
+    title: "THƯA MẸ CON ĐI",
     image: "thuamecondi.webp",
     year: 2019,
     ageRestriction: "T18",
