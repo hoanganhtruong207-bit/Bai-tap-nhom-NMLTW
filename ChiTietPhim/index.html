@@ -21,7 +21,7 @@
         </nav>
       </div>
       <div class="header-right">
-        <button class="btn-login" id="btn-login-header">Đăng Nhập</button>
+        <a href="./Source/DangNhap/index.html" class="login">Đăng nhập</a>
       </div>
     </header>
 
@@ -54,9 +54,13 @@
               <button class="btn-watch-movie" id="btn-open-player">
                 ▶ Xem phim
               </button>
-              <button class="btn-ticket-movie" id="btn-open-booking">
+              <a
+                href="booking.html"
+                class="btn-ticket-movie"
+                id="btn-open-booking"
+              >
                 🎟 Đặt vé ngay
-              </button>
+              </a>
             </div>
           </div>
           <div class="banner-right-image" id="banner-media-box">
@@ -98,30 +102,6 @@
         </div>
       </div>
     </div>
-
-    <div class="auth-modal" id="login-modal">
-      <div class="auth-modal-overlay" id="modal-overlay"></div>
-      <div class="auth-modal-content">
-        <button class="auth-modal-close" id="btn-close-modal">&times;</button>
-        <h2>Đăng Nhập</h2>
-      </div>
-    </div>
-
-    <div class="booking-modal" id="booking-modal">
-      <div class="booking-modal-overlay" id="booking-overlay"></div>
-      <div class="booking-modal-content">
-        <button class="booking-modal-close" id="btn-close-booking">
-          &times;
-        </button>
-        <h2>Đặt Vé</h2>
-        <div id="seats-grid"></div>
-        <div class="booking-summary">
-          <p>Ghế đã chọn: <span id="selected-seats-text">Chưa chọn</span></p>
-        </div>
-        <button class="btn-checkout" id="btn-submit-booking">Xác Nhận</button>
-      </div>
-    </div>
-
     <script src="mockData.js"></script>
     <script src="movieRenderer.js"></script>
     <script src="script.js"></script>
