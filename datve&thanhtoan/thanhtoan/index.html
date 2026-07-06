@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineGo - Thanh Toán Vé Phim</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🎬 THANH TOÁN VÉ PHIM</h1>
+    </header>
+    
+    <main class="container">
+
+        <section class="box">
+            <h2>🎟️ Thông Tin Đặt Vé</h2>
+
+            <div class="info-row">
+                <span>Tên phim</span>
+                <span id="movieName" class="highlight-text">Đang tải...</span>
+            </div>
+
+            <div class="info-row">
+                <span>Rạp chiếu</span>
+                <span id="cinema">Đang tải...</span>
+            </div>
+
+            <div class="info-row">
+                <span>Suất chiếu</span>
+                <span id="showtime">Đang tải...</span>
+            </div>
+
+            <div class="info-row">
+                <span>Ghế đã chọn</span>
+                <span id="seatList" class="seat-text">Đang tải...</span>
+            </div>
+
+            <div class="info-row">
+                <span>Số lượng vé</span>
+                <span id="ticketCount">0 vé</span>
+            </div>
+        </section>
+
+        <section class="box">
+            <h2>💳 Phương Thức Thanh Toán</h2>
+
+            <div class="payment-options">
+                <label class="payment-item">
+                    <input type="radio" name="payment" value="Ví MoMo">
+                    <span>MoMo</span>
+                </label>
+
+                <label class="payment-item">
+                    <input type="radio" name="payment" value="Cổng VNPay">
+                    <span>VNPay</span>
+                </label>
+                <label class="payment-item">
+                    <input type="radio" name="payment" value="Cổng VNPay">
+                    <span>Zalo Pay</span>
+                </label>
+                <label class="payment-item">
+                    <input type="radio" name="payment" value="Ví ZaloPay">
+                    <span>Visa / Mastercard</span>
+                </label>
+
+                <label class="payment-item">
+                    <input type="radio" name="payment" value="Thẻ Visa/Mastercard">
+                    <span>Ngân hàng</span>
+                </label>
+            </div>
+        </section>
+
+        <section class="box">
+            <h2>🧾 Chi Tiết Thanh Toán</h2>
+
+            <div class="row">
+                <span>Tiền vé tạm tính</span>
+                <span id="ticketPrice">0đ</span>
+            </div>
+
+            <hr>
+
+            <div class="row total">
+                <span>Tổng cộng</span>
+                <span id="totalPrice">0đ</span>
+            </div>
+        </section>
+
+        <div class="btn-group">
+            <a href="1.html" class="nav-link">
+                <button type="button" class="back-btn">Quay Lại</button>
+            </a>
+
+            <button type="button" class="pay-btn" onclick="payTicket()">
+                Xác Nhận Thanh Toán
+            </button>
+        </div>
+
+    </main>
+    <script src="thanhtoan.js"></script>
+
+</body>
+</html>
