@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặt Vé Xem Phim</title>
+    <link rel="stylesheet" href="datve.css">
+</head>
+<body>
+<header>
+    <img src="image/Pasted_image2.png" alt="CineGo Logo" class="logo">
+    <h1>Đặt Vé Phim</h1>
+</header>
+<main>
+    <section id="step1">
+        <h3 class="section-title">1. Chọn Ngày</h3>
+        <div class="flex-container" id="date-list"></div>
+        <h3 class="section-title">2. Chọn Rạp</h3>
+        <div class="flex-container" id="theater-list">
+            <button class="btn-select active">CineGo Ninh Kiều</button>
+            <button class="btn-select">CineGo Bình Thủy</button>
+            <button class="btn-select">CineGo Cái Răng</button>
+            <button class="btn-select">CineGo Hưng Phú</button>
+        </div>
+
+        <h3 class="section-title">3. Chọn Suất Chiếu (Lồng Tiếng)</h3>
+        <div class="flex-container" id="time-list">
+            <button class="btn-select" onclick="goToStep2('08:00')">8:00</button>
+            <button class="btn-select" onclick="goToStep2('10:00')">10:00</button>
+            <button class="btn-select" onclick="goToStep2('12:00')">12:00</button>
+            <button class="btn-select" onclick="goToStep2('14:00')">14:00</button>
+            <button class="btn-select" onclick="goToStep2('16:00')">16:00</button>
+            <button class="btn-select" onclick="goToStep2('18:00')">18:00</button>
+            <button class="btn-select" onclick="goToStep2('20:00')">20:00</button>
+            <button class="btn-select" onclick="goToStep2('22:00')">22:00</button>
+        </div>
+    </section>
+    <section id="step2" style="display: none;">
+        <div class="screen-area">
+            <div class="screen-line">
+                <span class="screen-text">SCREEN</span>
+            </div>
+        </div>
+
+        <div class="seat-map" id="seat-map">
+            </div>
+
+        <div class="legend">
+            <div class="legend-item"><div class="legend-box thuong" style="border-color:#4caf50;"></div> Thường (50.000đ)</div>
+            <div class="legend-item"><div class="legend-box vip" style="border-color:#f44336;"></div> VIP (70.000đ)</div>
+            <div class="legend-item"><div class="legend-box sweetbox" style="background:#e91e63; border-color:#e91e63;"></div> Sweetbox (100.000đ)</div>
+            <div class="legend-item"><div class="legend-box selected" style="background:#66ace6; border-color:#66ace6;"></div> Đang chọn</div>
+            <div class="legend-item"><div class="legend-box sold" style="background:#ccc; border-color:#ccc;"></div> Không thể chọn</div>
+        </div>
+
+        <div class="action-bar">
+            <button class="btn-prev" onclick="goToStep1()">&#8592; TRỞ VỀ</button>
+            <div class="movie-info">
+                <div>
+                    <strong>TÊN PHIM</strong><br>2D
+                </div>
+                <div>
+                    Rạp: <span id="info-theater"></span><br>
+                    Suất chiếu: <span id="info-time">--:--</span> | <span id="info-date">--/--/2026</span>
+                </div>
+                <div>
+                    Ghế: <span id="info-seats"></span><br>
+                    Tổng: <strong id="info-total">0 đ</strong>
+                </div>
+            </div>
+            <button class="btn-next" onclick="checkout()">TIẾP TỤC &#8594;</button>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 CineGo</p>
+</footer>
+
+<script src="datve.js"></script>
+</body>
+</html>
