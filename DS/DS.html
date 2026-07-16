@@ -1,0 +1,169 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Danh sách phim full HD | CineGo</title>
+    <link rel="icon" href="logoweb.jpg" type="image/jpeg" />
+    <link rel="stylesheet" href="global.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="wrapper">
+    <header class="main-header">
+      <div class="header-left">
+        <div class="logo">
+          <img src="logoweb.jpg" alt="Logo CineGo" class="logo-img" />
+        </div>
+        <nav class="header-nav">
+          <a href="index.html" class="nav-item">Trang chủ</a>
+          <a href="danh-sach-phim.html" class="nav-item">Danh sách phim</a>
+          <form class="form-search">
+            <input
+              class="form-search-input"
+              type="text"
+              placeholder="Tìm tên phim"
+            />
+            <button class="form-search-button" type="button">
+              <i class="fa fa-search"></i>
+            </button>
+          </form>
+        </nav>
+      </div>
+
+      <div class="header-right">
+        <a href="./Source/DangNhap/index.html" class="btn-auth btn-login"
+          >Đăng nhập</a
+        >
+      </div>
+    </header>
+
+    <script>
+      function toggleSearch() {
+        var searchBox = document.getElementById("search-box");
+        if (
+          searchBox.style.display === "none" ||
+          searchBox.style.display === ""
+        ) {
+          searchBox.style.display = "block";
+          searchBox.focus();
+        } else {
+          searchBox.style.display = "none";
+        }
+      }
+    </script>
+    <main class="page-main">
+      <!-- Phim 1: Aquaman -->
+      <article class="item">
+        <a href="AQM.html">
+          <img class="item-image" src="aquaman.webp" alt="AQUAMAN" />
+        </a>
+        <div class="item-info">
+          <p class="item-id" hidden>aquaman</p>
+          <h3 class="item-title">Aquaman (2023) - 124p</h3>
+          <p class="item-description">
+            Aquaman đối đầu với kẻ thù cổ xưa để bảo vệ Atlantis.
+          </p>
+        </div>
+      </article>
+
+      <!-- Phim 2: Argylle -->
+      <article class="item">
+        <a href="ARL.html"></a>
+        <img class="item-image" src="argylle.webp" alt="ARGYLLE" />
+        <div class="item-info">
+          <p class="item-id" hidden>argylle</p>
+          <h3 class="item-title">Argylle (2024) - 139p</h3>
+          <p class="item-description">
+            Tiểu thuyết gia điệp viên bị cuốn vào thế giới gián điệp thật.
+          </p>
+        </div>
+      </article>
+
+      <!-- Phim 3: Bố Già -->
+      <article class="item">
+        <img class="item-image" src="bo-gia.jpeg" alt="BỐ GIÀ" />
+        <div class="item-info">
+          <p class="item-id" hidden>bo-gia</p>
+          <h3 class="item-title">Bố Già (2021) - 128p</h3>
+          <p class="item-description">
+            Câu chuyện xúc động về tình cha con trong xóm lao động nghèo.
+          </p>
+        </div>
+      </article>
+
+      <!-- Phim 4: Mai -->
+      <article class="item">
+        <img class="item-image" src="mai.webp" alt="MAI" />
+        <div class="item-info">
+          <p class="item-id" hidden>mai</p>
+          <h3 class="item-title">Mai (2024) - 131p</h3>
+          <p class="item-description">
+            Hành trình tìm kiếm hạnh phúc của người phụ nữ nhiều tổn thương.
+          </p>
+        </div>
+      </article>
+
+      <!-- Phim 5: Mắt Biếc -->
+      <article class="item">
+        <a href="MB.html"></a>
+        <img class="item-image" src="mat-biec.jpg" alt="MẮT BIẾC" />
+        <div class="item-info">
+          <p class="item-id" hidden>mat-biec</p>
+          <h3 class="item-title">Mắt Biếc (2019) - 117p</h3>
+          <p class="item-description">
+            Mối tình đơn phương khắc khoải của Ngạn dành cho Hà Lan.
+          </p>
+        </div>
+      </article>
+
+      <!-- Phim 6: Ma Xó Oán Thai -->
+      <article class="item">
+        <img class="item-image" src="ma-xo.jpg" alt="MA XÓ OÁN THAI" />
+        <div class="item-info">
+          <p class="item-id" hidden>ma-xo-oan-thai</p>
+          <h3 class="item-title">Ma Xó (2025) - 95p</h3>
+          <p class="item-description">
+            Câu chuyện kinh dị về oán niệm từ quá khứ đau thương.
+          </p>
+        </div>
+      </article>
+
+      <!-- Phim 7: Tiệc Trăng Máu -->
+      <article class="item">
+        <a href="TTM.html"></a>
+        <img class="item-image" src="tiectrangmau.webp" alt="TIỆC TRĂNG MÁU" />
+        <div class="item-info">
+          <p class="item-id" hidden>tiec-trang-mau</p>
+          <h3 class="item-title">Tiệc Trăng Máu (2020) - 119p</h3>
+          <p class="item-description">
+            Bí mật bị phơi bày qua trò chơi công khai điện thoại bữa tối.
+          </p>
+        </div>
+      </article>
+
+      <!-- Phim 8: Thưa Mẹ Con Đi -->
+      <article class="item">
+        <img class="item-image" src="thuamecondi.webp" alt="THƯA MẸ CON ĐI" />
+        <div class="item-info">
+          <p class="item-id" hidden>thua-me-con-di</p>
+          <h3 class="item-title">Thưa Mẹ Con Đi (2019) - 100p</h3>
+          <p class="item-description">
+            Câu chuyện về sự chấp nhận của gia đình dành cho người con trai.
+          </p>
+        </div>
+      </article>
+    </main>
+    <script src="product-list.js"></script>
+    <script src="authentication.js"></script>
+
+    <script>
+      // Kiểm tra xác thực khi tải trang [cần khi chuyển trang qua lại]
+      checkAuthentication();
+    </script>
+  </body>
+</html>
