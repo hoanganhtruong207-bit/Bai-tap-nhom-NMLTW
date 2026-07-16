@@ -4,7 +4,7 @@
   margin: 0 auto;
   padding: 0;
 }
-/* Căn chỉnh header chính */
+
 
 .main-header {
   display: flex;
@@ -34,7 +34,7 @@
   gap: 40px;
 }
 
-/* Tăng khoảng cách giữa Trang chủ và DS Phim */
+
 
 .header-nav {
   display: flex;
@@ -52,7 +52,7 @@
   gap: 15px;
 }
 
-/* Style chung cho nút Auth */
+
 
 .btn-auth {
   text-decoration: none;
@@ -72,7 +72,7 @@
   color: #ffff;
 }
 
-/* Hiệu ứng chung cho cả 2 nút khi hover */
+
 
 .btn-auth:hover {
   background-color: #ffff;
@@ -82,7 +82,7 @@
   cursor: pointer;
 }
 
-/* Giữ lại style cho logo và nav-item */
+
 .logo-img {
   height: 50px;
 
@@ -108,7 +108,7 @@
 .nav-item:hover {
   color: #ffff;
 }
-/* Container bao bọc form */
+
 .form-search {
   display: flex;
   align-items: center;
@@ -120,7 +120,7 @@
   transition: 0.3s;
 }
 
-/* Ô nhập liệu - Đổi màu chữ thành trắng */
+
 .form-search-input {
   background-color: transparent;
   border: none;
@@ -142,17 +142,16 @@
   align-items: center;
 }
 
-/* Đảm bảo icon có màu trắng */
+
 .form-search-button i {
   color: #ffffff;
 }
 
-/* Hiệu ứng khi hover vào khung tìm kiếm */
+
 .form-search:hover {
   border-color: #555555;
 }
 
-/* Hiệu ứng hover cho nút tìm kiếm */
 .form-search-button:hover {
   color: #aaaaaa; /* Chuyển sang xám nhẹ khi hover để tạo cảm giác bấm */
 }
@@ -306,16 +305,16 @@
   box-shadow: 0 5px 15px rgba(229, 9, 20, 0.4);
 }
 .banner-right-image {
-  position: relative; /* Rất quan trọng: tạo gốc tọa độ cho trailer */
+  position: relative; 
   width: 300px;
   height: 445px;
-  overflow: hidden; /* Giúp trailer bo góc giống hệt poster */
+  overflow: hidden; 
   border-radius: 12px;
 }
 
 #poster-img,
 #poster-trailer {
-  position: absolute; /* Ép cả 2 nằm chồng lên nhau */
+  position: absolute; 
   top: 0;
   left: 0;
   width: 100%;
@@ -431,13 +430,13 @@
   gap: 15px;
 }
 
-/* Biến thẻ a (movie-card) thành khối và ép màu trắng */
+
 .movie-card {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  text-decoration: none; /* Bỏ gạch chân mặc định */
-  color: #ffffff; /* Ép màu trắng */
+  text-decoration: none; 
+  color: #ffffff; 
   transition: transform 0.3s ease;
 }
 
@@ -454,7 +453,7 @@
   display: block;
 }
 
-/* Định dạng cho tiêu đề và meta bên trong card */
+
 .card-title {
   font-size: 14px;
   color: #ffffff; /* Luôn trắng */
@@ -465,6 +464,6 @@
 
 .card-meta {
   font-size: 12px;
-  color: #aaaaaa; /* Màu xám cho năm/thời lượng */
+  color: #aaaaaa; 
   text-align: center;
 }
