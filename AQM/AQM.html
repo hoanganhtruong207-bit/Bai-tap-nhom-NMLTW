@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
@@ -23,11 +23,12 @@
           <a href="danh-sach-phim.html" class="nav-item">Danh sách phim</a>
           <form class="form-search">
             <input
+              id="search-box"
               class="form-search-input"
               type="text"
               placeholder="Tìm tên phim"
             />
-            <button class="form-search-button" type="button">
+            <button id="btn-search-submit" class="form-search-button" type="submit">
               <i class="fa fa-search"></i>
             </button>
           </form>
@@ -35,32 +36,13 @@
       </div>
 
       <div class="header-right">
-        <a href="./Source/DangNhap/index.html" class="btn-auth btn-login"
-          >Đăng nhập</a
-        >
+        <a href="./Source/DangNhap/index.html" class="btn-auth btn-login">Đăng nhập</a>
       </div>
     </header>
 
-    <script>
-      function toggleSearch() {
-        var searchBox = document.getElementById("search-box");
-        if (
-          searchBox.style.display === "none" ||
-          searchBox.style.display === ""
-        ) {
-          searchBox.style.display = "block";
-          searchBox.focus();
-        } else {
-          searchBox.style.display = "none";
-        }
-      }
-    </script>
     <div class="movie-detail-container">
       <div class="banner-blur-wrapper">
-        <div
-          class="banner-backdrop"
-          style="background-image: url(&quot;aquaman.webp&quot;)"
-        ></div>
+        <div class="banner-backdrop" style="background-image: url('aquaman.webp')"></div>
 
         <section class="movie-banner-section">
           <div class="banner-left-content">
@@ -82,48 +64,16 @@
             </p>
 
             <div class="banner-buttons">
-              <button
-                class="btn-watch-movie"
-                id="btn-open-player"
-                onclick="toggleTrailer()"
-              >
+              <button class="btn-watch-movie" id="btn-open-player">
                 ▶ Xem phim
               </button>
-              <script>
-                function toggleTrailer() {
-                  var img = document.getElementById("poster-img");
-                  var trailer = document.getElementById("poster-trailer");
-                  var btn = document.getElementById("btn-open-player");
-
-                  if (
-                    trailer.style.display == "none" ||
-                    trailer.style.display == ""
-                  ) {
-                    img.style.display = "none";
-                    trailer.style.display = "block";
-                    btn.innerText = "◀ Xem Poster";
-                  } else {
-                    img.style.display = "block";
-                    trailer.style.display = "none";
-                    btn.innerText = "▶ Xem phim";
-                  }
-                }
-              </script>
-              <a
-                href="booking.html"
-                class="btn-ticket-movie"
-                id="btn-open-booking"
-              >
+              <a href="booking.html" class="btn-ticket-movie" id="btn-open-booking">
                 🎟 Đặt vé ngay
               </a>
             </div>
           </div>
-          <!-- Chỗ này là chỗ cũ đang chứa cái ảnh <img> -->
-          <div
-            class="banner-right-image"
-            style="position: relative; width: 300px; height: 400px"
-          >
-            <!-- 1. Cái ảnh poster gốc -->
+
+          <div class="banner-right-image" style="position: relative; width: 300px; height: 400px">
             <img
               id="poster-img"
               src="aquaman.webp"
@@ -131,11 +81,10 @@
               style="width: 100%; height: 100%; object-fit: cover"
             />
 
-            <!-- 2. Cái trailer (nằm đè lên vị trí cái ảnh, ẩn mặc định) -->
-            <!-- 2. Cái trailer -->
             <iframe
               id="poster-trailer"
               src="https://www.youtube.com/embed/keZ70jipjXc?si=rRpQNwCY8zTwtpaE"
+              style="width: 100%; height: 100%; display: none; border: none;"
             >
             </iframe>
           </div>
@@ -167,7 +116,6 @@
                 </div>
               </a>
 
-              <!-- Phim 2: Thưa Mẹ Con Đi -->
               <a href="thuamecondi.html" class="movie-card">
                 <div class="movie-card-img">
                   <img src="thuamecondi.webp" alt="Phim Thưa Mẹ Con Đi" />
@@ -183,7 +131,6 @@
                 </div>
               </a>
 
-              <!-- Phim 3: Bố Già -->
               <a href="bogia.html" class="movie-card">
                 <div class="movie-card-img">
                   <img src="bo-gia.jpeg" alt="Phim Bố Già" />
@@ -199,7 +146,6 @@
                 </div>
               </a>
 
-              <!-- Phim 4: Mắt Biếc -->
               <a href="matbiec.html" class="movie-card">
                 <div class="movie-card-img">
                   <img src="mat-biec.jpg" alt="Phim Mắt Biếc" />
@@ -215,7 +161,6 @@
                 </div>
               </a>
 
-              <!-- Phim 5: Ma Xó -->
               <a href="maxo.html" class="movie-card">
                 <div class="movie-card-img">
                   <img src="ma-xo.jpg" alt="Phim Ma Xó" />
@@ -234,7 +179,7 @@
           </section>
         </div>
 
-        <div id="content-chi-tiet" class="tab-pane">
+        <div id="content-chi-tiet" class="tab-pane" style="display: none;">
           <section class="detail-movies-section">
             <h2>Thông Tin Chi Tiết</h2>
             <div class="movie-detail-info">
