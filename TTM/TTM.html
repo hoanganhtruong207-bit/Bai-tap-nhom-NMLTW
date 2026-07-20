@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
@@ -21,13 +21,16 @@
         <nav class="header-nav">
           <a href="index.html" class="nav-item">Trang chủ</a>
           <a href="danh-sach-phim.html" class="nav-item">Danh sách phim</a>
+          
+          <!-- Thanh tìm kiếm chuẩn hóa bộ ID -->
           <form class="form-search">
             <input
+              id="search-box"
               class="form-search-input"
               type="text"
               placeholder="Tìm tên phim"
             />
-            <button class="form-search-button" type="button">
+            <button id="btn-search-submit" class="form-search-button" type="submit">
               <i class="fa fa-search"></i>
             </button>
           </form>
@@ -35,31 +38,15 @@
       </div>
 
       <div class="header-right">
-        <a href="./Source/DangNhap/index.html" class="btn-auth btn-login"
-          >Đăng nhập</a
-        >
+        <a href="./Source/DangNhap/index.html" class="btn-auth btn-login">Đăng nhập</a>
       </div>
     </header>
 
-    <script>
-      function toggleSearch() {
-        var searchBox = document.getElementById("search-box");
-        if (
-          searchBox.style.display === "none" ||
-          searchBox.style.display === ""
-        ) {
-          searchBox.style.display = "block";
-          searchBox.focus();
-        } else {
-          searchBox.style.display = "none";
-        }
-      }
-    </script>
     <div class="movie-detail-container">
       <div class="banner-blur-wrapper">
         <div
           class="banner-backdrop"
-          style="background-image: url(&quot;tiectrangmau.webp&quot;)"
+          style="background-image: url('tiectrangmau.webp')"
         ></div>
 
         <section class="movie-banner-section">
@@ -82,48 +69,21 @@
             </p>
 
             <div class="banner-buttons">
-              <button
-                class="btn-watch-movie"
-                id="btn-open-player"
-                onclick="toggleTrailer()"
-              >
+              <!-- Loại bỏ onclick, giao toàn bộ nhiệm vụ lắng nghe sự kiện cho script.js -->
+              <button class="btn-watch-movie" id="btn-open-player">
                 ▶ Xem phim
               </button>
-              <script>
-                function toggleTrailer() {
-                  var img = document.getElementById("poster-img");
-                  var trailer = document.getElementById("poster-trailer");
-                  var btn = document.getElementById("btn-open-player");
-
-                  if (
-                    trailer.style.display == "none" ||
-                    trailer.style.display == ""
-                  ) {
-                    img.style.display = "none";
-                    trailer.style.display = "block";
-                    btn.innerText = "◀ Xem Poster";
-                  } else {
-                    img.style.display = "block";
-                    trailer.style.display = "none";
-                    btn.innerText = "▶ Xem phim";
-                  }
-                }
-              </script>
-              <a
-                href="booking.html"
-                class="btn-ticket-movie"
-                id="btn-open-booking"
-              >
+              <a href="booking.html" class="btn-ticket-movie" id="btn-open-booking">
                 🎟 Đặt vé ngay
               </a>
             </div>
           </div>
-          <!-- Chỗ này là chỗ cũ đang chứa cái ảnh <img> -->
+
           <div
             class="banner-right-image"
             style="position: relative; width: 300px; height: 400px"
           >
-            <!-- 1. Cái ảnh poster gốc -->
+            <!-- Ảnh Poster gốc -->
             <img
               id="poster-img"
               src="tiectrangmau.webp"
@@ -131,11 +91,11 @@
               style="width: 100%; height: 100%; object-fit: cover"
             />
 
-            <!-- 2. Cái trailer (nằm đè lên vị trí cái ảnh, ẩn mặc định) -->
-            <!-- 2. Cái trailer -->
+            <!-- Khung chứa Trailer (Mặc định ẩn qua CSS inline giống Argylle và Mắt Biếc) -->
             <iframe
               id="poster-trailer"
               src="https://www.youtube.com/embed/nh0BklwPN9Q"
+              style="width: 100%; height: 100%; display: none; border: none;"
             >
             </iframe>
           </div>
@@ -148,6 +108,7 @@
       </nav>
 
       <div class="tab-contents">
+        <!-- Khối phim liên quan -->
         <div id="content-tong-quan" class="tab-pane active">
           <section class="related-movies-section">
             <h2>Phim Liên Quan</h2>
@@ -235,7 +196,8 @@
           </section>
         </div>
 
-        <div id="content-chi-tiet" class="tab-pane">
+        <!-- Khối thông tin chi tiết (Mặc định ẩn để JS kích hoạt khi nhấn tab) -->
+        <div id="content-chi-tiet" class="tab-pane" style="display: none;">
           <section class="detail-movies-section">
             <h2>Thông Tin Chi Tiết</h2>
             <div class="movie-detail-info">
@@ -259,6 +221,8 @@
         </div>
       </div>
     </div>
+
+    <!-- Gọi tệp điều khiển JS ở cuối trang -->
     <script src="script.js"></script>
   </body>
 </html>
