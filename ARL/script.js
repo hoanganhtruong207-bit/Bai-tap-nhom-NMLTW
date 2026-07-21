@@ -45,3 +45,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+// 3. Chuyển trang Đặt vé
+const btnOpenBooking = document.getElementById("btn-open-booking");
+
+if (btnOpenBooking) {
+    btnOpenBooking.addEventListener("click", () => {
+        const movieName = document.querySelector(".movie-title").innerText;
+        localStorage.setItem("movieName", movieName);
+        window.location.href = "../datve&thanhtoan/datve.html";
+    });
+}
