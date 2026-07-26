@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Xem phim Mắt Biếc full HD | CineGo</title>
+  <link rel="icon" href="../../image/crew3.png" type="image/jpeg" />
+  <link rel="stylesheet" href="global.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="main-header">
+    <div class="header-left">
+      <div class="logo">
+        <img src="../../image/crew3.png" alt="Logo CineGo" class="logo-img" />
+      </div>
+      <nav class="header-nav">
+        <a href="../../../1.html" class="nav-item">Trang chủ</a>
+        <a href="../DS/DS.html" class="nav-item">Danh sách phim</a>
+
+        <!-- Thanh tìm kiếm cố định giống trang Argylle -->
+        <form class="form-search">
+          <input id="search-box" class="form-search-input" type="text" placeholder="Tìm tên phim" />
+          <button id="btn-search-submit" class="form-search-button" type="submit">
+            <i class="fa fa-search"></i>
+          </button>
+        </form>
+      </nav>
+    </div>
+
+    <div class="header-right">
+      <a href="../../DANGNHAP/index.html" class="btn-auth btn-login">Đăng nhập</a>
+    </div>
+  </header>
+
+  <div class="movie-detail-container">
+    <div class="banner-blur-wrapper">
+      <div class="banner-backdrop" style="background-image: url('tiectrangmau.webp')"></div>
+
+      <section class="movie-banner-section">
+        <div class="banner-left-content">
+          <h1 class="movie-title">MẮT BIẾC</h1>
+          <div class="movie-meta">
+            <span class="year">2019</span>
+            <span class="age-limit">T13</span>
+            <span class="duration">117 phút</span>
+            <span class="quality">HD</span>
+          </div>
+          <div class="movie-rating">
+            <span class="stars">★★★★☆</span>
+            <span class="rating-value">8.2/10</span>
+            <span class="review-count">(1.6k đánh giá)</span>
+          </div>
+          <p class="movie-description">
+            Dựa trên tiểu thuyết cùng tên của nhà văn Nguyễn Nhật Ánh, Mắt
+            Biếc dẫn dắt người xem vào thế giới đầy mộng mơ và hoài niệm của
+            Ngạn.
+          </p>
+
+          <div class="banner-buttons">
+            <!-- Đã bỏ hoàn toàn thuộc tính onclick trực tiếp -->
+            <button class="btn-watch-movie" id="btn-open-player">
+              ▶ Xem phim
+            </button>
+            <a href="../../datve&thanhtoan/datve.html" class="btn-ticket-movie" id="btn-open-booking">
+              🎟 Đặt vé ngay
+            </a>
+          </div>
+        </div>
+
+        <div class="banner-right-image" style="position: relative; width: 300px; height: 400px">
+          <!-- Ảnh Poster phim Mắt Biếc -->
+          <img id="poster-img" src="mat-biec.jpg" alt="Poster" style="width: 100%; height: 100%; object-fit: cover" />
+
+          <!-- Iframe chứa trailer YouTube của Mắt Biếc (Mặc định ẩn qua CSS inline) -->
+          <iframe id="poster-trailer" src="https://www.youtube.com/embed/ITlQ0oU7tDA?si=nRDsq0kDxEhXbvin"
+            style="width: 100%; height: 100%; display: none; border: none;">
+          </iframe>
+        </div>
+      </section>
+    </div>
+
+    <nav class="movie-tabs">
+      <a href="#" class="tab-item active" data-tab="tong-quan">TỔNG QUAN</a>
+      <a href="#" class="tab-item" data-tab="chi-tiet">CHI TIẾT</a>
+    </nav>
+
+    <div class="tab-contents">
+      <!-- Khối tổng quan phim liên quan của Mắt Biếc -->
+      <div id="content-tong-quan" class="tab-pane active">
+        <section class="related-movies-section">
+          <h2>Phim Liên Quan</h2>
+          <div class="movies-grid">
+            <!-- Phim 1: Aquaman -->
+            <a href="aquaman.html" class="movie-card">
+              <div class="movie-card-img">
+                <img src="aquaman.webp" alt="Phim Aquaman" />
+                <span class="card-quality">HD</span>
+                <span class="card-age">T13</span>
+              </div>
+              <div class="movie-card-info">
+                <h3 class="card-title">AQUAMAN</h3>
+                <div class="card-meta">
+                  <span class="card-year">2018</span>
+                  <span class="card-duration">143 phút</span>
+                </div>
+              </div>
+            </a>
+
+            <!-- Phim 2: Thưa Mẹ Con Đi -->
+            <a href="thuamecondi.html" class="movie-card">
+              <div class="movie-card-img">
+                <img src="thuamecondi.webp" alt="Phim Thưa Mẹ Con Đi" />
+                <span class="card-quality">HD</span>
+                <span class="card-age">T18</span>
+              </div>
+              <div class="movie-card-info">
+                <h3 class="card-title">THƯA MẸ CON ĐI</h3>
+                <div class="card-meta">
+                  <span class="card-year">2019</span>
+                  <span class="card-duration">100 phút</span>
+                </div>
+              </div>
+            </a>
+
+            <!-- Phim 3: Bố Già -->
+            <a href="bogia.html" class="movie-card">
+              <div class="movie-card-img">
+                <img src="bo-gia.jpeg" alt="Phim Bố Già" />
+                <span class="card-quality">HD</span>
+                <span class="card-age">T13</span>
+              </div>
+              <div class="movie-card-info">
+                <h3 class="card-title">BỐ GIÀ</h3>
+                <div class="card-meta">
+                  <span class="card-year">2021</span>
+                  <span class="card-duration">128 phút</span>
+                </div>
+              </div>
+            </a>
+
+            <!-- Phim 4: Tiệc Trăng Máu -->
+            <a href="tiec-trang-mau.html" class="movie-card">
+              <div class="movie-card-img">
+                <img src="tiectrangmau.webp" alt="Phim TIỆC TRĂNG MÁU" />
+                <span class="card-quality">HD</span>
+                <span class="card-age">T18</span>
+              </div>
+              <div class="movie-card-info">
+                <h3 class="card-title">TIỆC TRĂNG MÁU</h3>
+                <div class="card-meta">
+                  <span class="card-year">2020</span>
+                  <span class="card-duration">119 phút</span>
+                </div>
+              </div>
+            </a>
+
+            <!-- Phim 5: Ma Xó -->
+            <a href="maxo.html" class="movie-card">
+              <div class="movie-card-img">
+                <img src="ma-xo.jpg" alt="Phim Ma Xó" />
+                <span class="card-quality">HD</span>
+                <span class="card-age">T18</span>
+              </div>
+              <div class="movie-card-info">
+                <h3 class="card-title">MA XÓ</h3>
+                <div class="card-meta">
+                  <span class="card-year">2024</span>
+                  <span class="card-duration">95 phút</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </section>
+      </div>
+
+      <!-- Khối thông tin chi tiết (đã đồng bộ nội dung chỉ nói về Mắt Biếc, ẩn mặc định) -->
+      <div id="content-chi-tiet" class="tab-pane" style="display: none;">
+        <section class="detail-movies-section">
+          <h2>Thông Tin Chi Tiết</h2>
+          <div class="movie-detail-info">
+            <span class="label">Nội dung:</span>
+            <div class="movie-detail-content">
+              <p>
+                Dựa trên tiểu thuyết kinh điển của Nguyễn Nhật Ánh, Mắt Biếc
+                la một khúc tình ca buồn về tình yêu đơn phương day dứt. Ngạn
+                – chàng trai với đôi mắt chất chứa cả bầu trời hoài niệm – đã
+                dành cả thanh xuân chỉ để yêu một đôi mắt biếc. Từ làng Đo Đo
+                xanh mướt đến chốn đô thị hoa lệ, tình yêu của Ngạn vẫn vẹn
+                nguyên dù lòng người đã thay đổi.
+              </p>
+              <p>
+                Bộ phim là những mảng ký ức đẹp đến nao lòng về tuổi thơ, về
+                mối tình đầu tinh khôi nhưng không thành, và là nỗi đau âm ỉ
+                của kẻ luôn đứng sau nhìn người mình yêu hạnh phúc bên người khác.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <!-- Nhúng file JS xử lý sự kiện ở cuối trang -->
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Xem phim Tiệc Trăng Máu full HD | CineGo</title>
+  <link rel="icon" href="../../image/crew3.png" type="image/jpeg" />
+  <link rel="stylesheet" href="global.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="main-header">
+    <div class="header-left">
+      <div class="logo">
+        <img src="../../image/crew3.png" alt="Logo CineGo" class="logo-img" />
+      </div>
+      <nav class="header-nav">
+        <a href="../../../1.html" class="nav-item">Trang chủ</a>
+        <a href="../DS/DS.html" class="nav-item">Danh sách phim</a>
+
+        <!-- Thanh tìm kiếm chuẩn hóa bộ ID -->
+        <form class="form-search">
+          <input id="search-box" class="form-search-input" type="text" placeholder="Tìm tên phim" />
+          <button id="btn-search-submit" class="form-search-button" type="submit">
+            <i class="fa fa-search"></i>
+          </button>
+        </form>
+      </nav>
+    </div>
+
+    <div class="header-right">
+      <a href="../../DANGNHAP/index.html" class="btn-auth btn-login">Đăng nhập</a>
+    </div>
+  </header>
+
+  <div class="movie-detail-container">
+    <div class="banner-blur-wrapper">
+      <div class="banner-backdrop" style="background-image: url('tiectrangmau.webp')"></div>
+
+      <section class="movie-banner-section">
+        <div class="banner-left-content">
+          <h1 class="movie-title">TIỆC TRĂNG MÁU</h1>
+          <div class="movie-meta">
+            <span class="year">2020</span>
+            <span class="age-limit">T18</span>
+            <span class="duration">119 phút</span>
+            <span class="quality">HD</span>
+          </div>
+          <div class="movie-rating">
+            <span class="stars">★★★★☆</span>
+            <span class="rating-value">8.5/10</span>
+            <span class="review-count">(1.2k đánh giá)</span>
+          </div>
+          <p class="movie-description">
+            Remake từ siêu phẩm Perfect Strangers, Tiệc Trăng Máu làm khuynh
+            đảo phòng vé cuối 2020.
+          </p>
+
+          <div class="banner-buttons">
+            <!-- Loại bỏ onclick, giao toàn bộ nhiệm vụ lắng nghe sự kiện cho script.js -->
+            <button class="btn-watch-movie" id="btn-open-player">
+              ▶ Xem phim
+            </button>
+            <a href="../../datve&thanhtoan/datve.html" class="btn-ticket-movie" id="btn-open-booking">
+              🎟 Đặt vé ngay
+            </a>
+          </div>
+        </div>
+
+        <div class="banner-right-image" style="position: relative; width: 300px; height: 400px">
+          <!-- Ảnh Poster gốc -->
+          <img id="poster-img" src="tiectrangmau.webp" alt="Poster"
+            style="width: 100%; height: 100%; object-fit: cover" />
+
+          <!-- Khung chứa Trailer (Mặc định ẩn qua CSS inline giống Argylle và Mắt Biếc) -->
+          <iframe id="poster-trailer" src="https://www.youtube.com/embed/nh0BklwPN9Q"
+            style="width: 100%; height: 100%; display: none; border: none;">
+          </iframe>
+        </div>
+      </section>
+    </div>
+
+    <nav class="movie-tabs">
+      <a href="#" class="tab-item active" data-tab="tong-quan">TỔNG QUAN</a>
+      <a href="#" class="tab-item" data-tab="chi-tiet">CHI TIẾT</a>
+    </nav>
+
+    <div class="tab-contents">
+      <!-- Khối phim liên quan -->
+      <div id="content-tong-quan" class="tab-pane active">
+        <section class="related-movies-section">
+          <h2>Phim Liên Quan</h2>
+          <div class="movies-grid">
+            <!-- Phim 1: Aquaman -->
+            <a href="aquaman.html" class="movie-card">
+              <div class="movie-card-img">
+                <img src="aquaman.webp" alt="Phim Aquaman" />
+                <span class="card-quality">HD</span>
+                <span class="card-age">T13</span>
+              </div>
+              <div class="movie-card-info">
+                <h3 class="card-title">AQUAMAN</h3>
+                <div class="card-meta">
+                  <span class="card-year">2018</span>
+                  <span class="card-duration">143 phút</span>
+                </div>
+              </div>
+            </a>
+
+            <!-- Phim 2: Thưa Mẹ Con Đi -->
+            <a href="thuamecondi.html" class="movie-card">
+              <div class="movie-card-img">
+                <img src="thuamecondi.webp" alt="Phim Thưa Mẹ Con Đi" />
+                <span class="card-quality">HD</span>
+                <span class="card-age">T18</span>
+              </div>
+              <div class="movie-card-info">
+                <h3 class="card-title">THƯA MẸ CON ĐI</h3>
+                <div class="card-meta">
+                  <span class="card-year">2019</span>
+                  <span class="card-duration">100 phút</span>
+                </div>
+              </div>
+            </a>
+
+            <!-- Phim 3: Bố Già -->
+            <a href="bogia.html" class="movie-card">
+              <div class="movie-card-img">
+                <img src="bo-gia.jpeg" alt="Phim Bố Già" />
+                <span class="card-quality">HD</span>
+                <span class="card-age">T13</span>
+              </div>
+              <div class="movie-card-info">
+                <h3 class="card-title">BỐ GIÀ</h3>
+                <div class="card-meta">
+                  <span class="card-year">2021</span>
+                  <span class="card-duration">128 phút</span>
+                </div>
+              </div>
+            </a>
+
+            <!-- Phim 4: Mắt Biếc -->
+            <a href="matbiec.html" class="movie-card">
+              <div class="movie-card-img">
+                <img src="mat-biec.jpg" alt="Phim Mắt Biếc" />
+                <span class="card-quality">HD</span>
+                <span class="card-age">T13</span>
+              </div>
+              <div class="movie-card-info">
+                <h3 class="card-title">MẮT BIẾC</h3>
+                <div class="card-meta">
+                  <span class="card-year">2019</span>
+                  <span class="card-duration">117 phút</span>
+                </div>
+              </div>
+            </a>
+
+            <!-- Phim 5: Ma Xó -->
+            <a href="maxo.html" class="movie-card">
+              <div class="movie-card-img">
+                <img src="ma-xo.jpg" alt="Phim Ma Xó" />
+                <span class="card-quality">HD</span>
+                <span class="card-age">T18</span>
+              </div>
+              <div class="movie-card-info">
+                <h3 class="card-title">MA XÓ</h3>
+                <div class="card-meta">
+                  <span class="card-year">2024</span>
+                  <span class="card-duration">95 phút</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </section>
+      </div>
+
+      <!-- Khối thông tin chi tiết (Mặc định ẩn để JS kích hoạt khi nhấn tab) -->
+      <div id="content-chi-tiet" class="tab-pane" style="display: none;">
+        <section class="detail-movies-section">
+          <h2>Thông Tin Chi Tiết</h2>
+          <div class="movie-detail-info">
+            <span class="label">Nội dung:</span>
+            <div class="movie-detail-content">
+              <p>
+                Tiệc Trăng Máu là câu chuyện về một nhóm bạn thân thiết từ
+                thời niên thiếu. Trong một buổi họp mặt cuối tuần, họ quyết
+                định cùng nhau tham gia một trò chơi "chia sẻ điện thoại" công
+                khai tất cả tin nhắn, cuộc gọi và thông báo đến cho những
+                người còn lại.
+              </p>
+              <p>
+                Những bí mật kinh hoàng dần được hé lộ, những chiếc mặt nạ dần
+                được gỡ bỏ, tình bạn lâu năm của họ bắt đầu lung lay và dẫn
+                đến những hệ lụy không thể lường trước.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gọi tệp điều khiển JS ở cuối trang -->
+  <script src="script.js"></script>
+</body>
+
+</html>
